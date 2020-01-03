@@ -42,7 +42,7 @@ public class DashboardFragment extends Fragment {
 
         layoutManager = new LinearLayoutManager(getContext());
         layoutManager.setOrientation(LinearLayoutManager.VERTICAL);
-        apiInterface = ApiClient.getClient().create(ApiInterface.class);
+        apiInterface = ApiClient.connect().create(ApiInterface.class);
         refresh();
     }
 
