@@ -4,7 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:background="#FFFFFF"
+    android:orientation="vertical"
+    android:paddingTop="50dp">
 
     <ImageView
         android:id="@+id/ivFoto"
@@ -22,7 +24,8 @@
         android:layout_gravity="center"
         android:layout_marginTop="10dp"
         android:text="Nama"
-        app:layout_constraintTop_toBottomOf="@+id/imageView2"
+        android:textAlignment="center"
+        app:layout_constraintTop_toBottomOf="@+id/ivFoto"
         tools:layout_editor_absoluteX="105dp" />
 
     <TextView
@@ -32,6 +35,8 @@
         android:layout_gravity="center"
         android:layout_marginTop="10dp"
         android:text="NIM"
+
+        android:textAlignment="center"
         app:layout_constraintTop_toBottomOf="@+id/tvNama"
         tools:layout_editor_absoluteX="105dp" />
 
@@ -42,6 +47,8 @@
         android:layout_gravity="center"
         android:layout_marginTop="10dp"
         android:text="Program Studi"
+
+        android:textAlignment="center"
         app:layout_constraintTop_toBottomOf="@+id/tvNIM"
         tools:layout_editor_absoluteX="105dp" />
 

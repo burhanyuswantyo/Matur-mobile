@@ -3,6 +3,9 @@ package com.project.matur.model;
 import com.google.gson.annotations.SerializedName;
 
 public class Laporan {
+    @SerializedName("gambar")
+    private String gambar;
+
     @SerializedName("deskripsi")
     private String deskripsi;
 
@@ -14,10 +17,19 @@ public class Laporan {
 
     public Laporan(){}
 
-    public Laporan(String deskripsi, String kategori, String status) {
+    public Laporan(String gambar, String deskripsi, String kategori, String status) {
+        this.gambar = gambar;
         this.deskripsi = deskripsi;
         this.kategori = kategori;
         this.status = status;
+    }
+
+    public String getGambar() {
+        return gambar;
+    }
+
+    public void setGambar(String gambar) {
+        this.gambar = gambar;
     }
 
     public String getDeskripsi() {

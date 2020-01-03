@@ -1,5 +1,6 @@
 package com.project.matur.api;
 
+import com.project.matur.model.GetKategori;
 import com.project.matur.model.GetLaporan;
 import com.project.matur.model.PostPutDelLaporan;
 
@@ -11,6 +12,9 @@ import retrofit2.http.GET;
 import retrofit2.http.HTTP;
 import retrofit2.http.POST;
 import retrofit2.http.PUT;
+import retrofit2.http.Part;
+import retrofit2.http.Path;
+import retrofit2.http.Query;
 
 public interface ApiInterface {
     @FormUrlEncoded
@@ -18,8 +22,11 @@ public interface ApiInterface {
     Call<ResponseBody> login(@Field("nim") String nim,
                              @Field("password") String password);
 
-    @GET("laporan?status_id=4")
-    Call<GetLaporan> getLaporan();
+    @GET("laporan")
+    Call<GetLaporan> getLaporan(@Query("user_id") String user_id);
+
+    @GET("laporan/kategori")
+    Call<GetKategori> getKategori();
 
     @FormUrlEncoded
     @POST("laporan")
@@ -37,4 +44,6 @@ public interface ApiInterface {
     @FormUrlEncoded
     @HTTP(method = "DELETE", path = "laporan", hasBody = true)
     Call<PostPutDelLaporan> deletLaporan(@Field("id") String id);
+
+
 }

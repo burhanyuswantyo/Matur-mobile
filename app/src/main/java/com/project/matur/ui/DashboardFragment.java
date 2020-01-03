@@ -15,11 +15,13 @@ import androidx.lifecycle.ViewModelProviders;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.google.gson.JsonObject;
 import com.project.matur.MainActivity;
 import com.project.matur.R;
 import com.project.matur.adapter.LaporanAdapter;
 import com.project.matur.api.ApiClient;
 import com.project.matur.api.ApiInterface;
+import com.project.matur.api.Session;
 import com.project.matur.model.GetLaporan;
 import com.project.matur.model.Laporan;
 
@@ -57,7 +59,9 @@ public class DashboardFragment extends Fragment {
     }
 
     public void refresh(){
-        Call<GetLaporan> laporanCall = apiInterface.getLaporan();
+        Session session = Session.init(getContext());
+        String user_id = session.getString("id");
+        Call<GetLaporan> laporanCall = apiInterface.getLaporan(user_id);
         laporanCall.enqueue(new Callback<GetLaporan>() {
             @Override
             public void onResponse(Call<GetLaporan> call, Response<GetLaporan> response) {
