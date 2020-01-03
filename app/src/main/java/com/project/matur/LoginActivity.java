@@ -52,7 +52,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnLongClick
         btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                RetrofitClient client = new RetrofitClient("http://192.168.1.152/matur/api/laporan/login/");
+                RetrofitClient client = new RetrofitClient("http://matur.mikelas.online/api/laporan/login/");
                 client.getServies().login(edtNim.getText().toString(), edtPassword.getText().toString()).enqueue(new Callback<ResponseBody>() {
                     @Override
                     public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {
