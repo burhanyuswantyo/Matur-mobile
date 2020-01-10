@@ -26,7 +26,8 @@ public interface ApiInterface {
                              @Field("password") String password);
 
     @GET("laporan")
-    Call<GetLaporan> getLaporan(@Query("user_id") String user_id);
+    Call<GetLaporan> getLaporan(@Query("user_id") String user_id,
+                                @Query("status_id") String status_id);
 
     @GET("laporan/kategori")
     Call<GetKategori> getKategori();
@@ -40,16 +41,6 @@ public interface ApiInterface {
                                   @Part("user_id") RequestBody user_id,
                                   @Part("kategori_id") RequestBody kategori_id,
                                   @Part("status_id") RequestBody status_id);
-
-//    @FormUrlEncoded
-//    @POST("laporan")
-//    Call<ResponseBody> postLaporan(@Field("deskripsi") String deskripsi,
-//                                        @Field("gambar") String gambar,
-//                                        @Field("date_created") String date_created,
-//                                        @Field("user_id") String user_id,
-//                                        @Field("kategori_id") String kategori_id,
-//                                        @Field("status_id") String status_id);
-
 
     @FormUrlEncoded
     @PUT("laporan")

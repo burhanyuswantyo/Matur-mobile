@@ -1,11 +1,13 @@
 package com.project.matur.ui;
 
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -15,6 +17,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.project.matur.R;
+import com.project.matur.activity.AddActivity;
 import com.project.matur.adapter.LaporanAdapter;
 import com.project.matur.api.ApiClient;
 import com.project.matur.api.ApiInterface;
@@ -57,7 +60,7 @@ public class AddFragment extends Fragment {
     public void refresh(){
         Session session = Session.init(getContext());
         String user_id = session.getString("id");
-        Call<GetLaporan> laporanCall = apiInterface.getLaporan(user_id);
+        Call<GetLaporan> laporanCall = apiInterface.getLaporan(user_id,null);
         laporanCall.enqueue(new Callback<GetLaporan>() {
             @Override
             public void onResponse(Call<GetLaporan> call, Response<GetLaporan> response) {
@@ -73,6 +76,7 @@ public class AddFragment extends Fragment {
             }
         });
     }
+
 }
 
 

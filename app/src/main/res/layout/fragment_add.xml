@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -9,136 +9,9 @@
     android:background="#ECECEC"
     android:orientation="vertical">
 
-    <androidx.cardview.widget.CardView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="10dp"
-        android:layout_marginTop="5dp"
-        android:layout_marginRight="10dp"
-        android:layout_marginBottom="5dp"
-        app:cardCornerRadius="5dp"
-        app:cardUseCompatPadding="true">
-
-        <TableLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_gravity="center"
-            android:layout_margin="10dp"
-            android:gravity="center">
-
-            <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:gravity="center">
-
-                <TextView
-                    android:id="@+id/textView14"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_marginTop="2dp"
-                    android:layout_marginRight="20dp"
-                    android:layout_marginBottom="2dp"
-                    android:gravity="center"
-                    android:text="Laporan Terkirim"
-                    android:textSize="16sp" />
-
-                <TextView
-                    android:id="@+id/textView15"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_marginLeft="20dp"
-                    android:layout_marginTop="2dp"
-                    android:layout_marginBottom="2dp"
-                    android:gravity="center"
-                    android:text="Laporan Diterima"
-                    android:textSize="16sp" />
-
-            </TableRow>
-
-            <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:gravity="center">
-
-                <TextView
-                    android:id="@+id/tvTerkirim"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_marginRight="20dp"
-                    android:gravity="center"
-                    android:text="0"
-                    android:textSize="16sp" />
-
-                <TextView
-                    android:id="@+id/tvDiterima"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_marginLeft="20dp"
-                    android:gravity="center"
-                    android:text="0"
-                    android:textSize="16sp" />
-
-            </TableRow>
-
-            <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:gravity="center">
-
-                <TextView
-                    android:id="@+id/textView10"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_marginTop="2dp"
-                    android:layout_marginRight="20dp"
-                    android:layout_marginBottom="2dp"
-                    android:gravity="center"
-                    android:text="Laporan Diproses"
-                    android:textSize="16sp" />
-
-                <TextView
-                    android:id="@+id/textView11"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_marginLeft="20dp"
-                    android:layout_marginTop="2dp"
-                    android:layout_marginBottom="2dp"
-                    android:gravity="center"
-                    android:text="Laporan Selesai"
-                    android:textSize="16sp" />
-            </TableRow>
-
-            <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="97dp"
-                android:gravity="center">
-
-                <TextView
-                    android:id="@+id/tvDiproses"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_marginRight="20dp"
-                    android:gravity="center"
-                    android:text="0"
-                    android:textSize="16sp" />
-
-                <TextView
-                    android:id="@+id/tvSelesai"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_marginLeft="20dp"
-                    android:gravity="center"
-                    android:text="0"
-                    android:textSize="16sp" />
-            </TableRow>
-        </TableLayout>
-
-    </androidx.cardview.widget.CardView>
-
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerView"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 
-</LinearLayout>
+</RelativeLayout>

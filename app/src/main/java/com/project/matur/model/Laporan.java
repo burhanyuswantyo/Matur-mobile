@@ -3,6 +3,9 @@ package com.project.matur.model;
 import com.google.gson.annotations.SerializedName;
 
 public class Laporan {
+    @SerializedName("id")
+    private String id;
+
     @SerializedName("gambar")
     private String gambar;
 

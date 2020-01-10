@@ -60,7 +60,7 @@ public class DashboardFragment extends Fragment implements View.OnClickListener 
     public void refresh(){
         Session session = Session.init(getContext());
         String user_id = session.getString("id");
-        Call<GetLaporan> laporanCall = apiInterface.getLaporan(user_id);
+        Call<GetLaporan> laporanCall = apiInterface.getLaporan(null,null);
         laporanCall.enqueue(new Callback<GetLaporan>() {
             @Override
             public void onResponse(Call<GetLaporan> call, Response<GetLaporan> response) {

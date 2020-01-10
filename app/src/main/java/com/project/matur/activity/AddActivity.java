@@ -199,7 +199,7 @@ Bitmap bitmap;
     }
 
     public void kategori() {
-        RetrofitClient client = new RetrofitClient("http://192.168.1.152/matur/api/laporan/kategori/");
+        RetrofitClient client = new RetrofitClient("http://matur.mikelas.online/api/laporan/kategori/");
         client.getServies().getKategori().enqueue(new Callback<GetKategori>() {
             @Override
             public void onResponse(Call<GetKategori> call, Response<GetKategori> response) {
