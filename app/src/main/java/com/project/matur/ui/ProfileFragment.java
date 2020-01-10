@@ -120,6 +120,7 @@ public class ProfileFragment extends Fragment {
         laporanCall.enqueue(new Callback<GetLaporan>() {
             @Override
             public void onResponse(Call<GetLaporan> call, Response<GetLaporan> response) {
+
                 List<Laporan> laporanList = response.body().getListDataLaporan();
                 tvDiproses.setText(String.valueOf(laporanList.size()));
             }

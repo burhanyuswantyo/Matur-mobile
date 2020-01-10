@@ -29,6 +29,7 @@ import com.android.volley.RequestQueue;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
+import com.project.matur.MainActivity;
 import com.project.matur.R;
 import com.project.matur.api.ApiClient;
 import com.project.matur.api.ApiInterface;
@@ -37,6 +38,7 @@ import com.project.matur.api.Session;
 import com.project.matur.model.GetKategori;
 import com.project.matur.model.GetResponse;
 import com.project.matur.model.Kategori;
+import com.project.matur.ui.AddFragment;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -162,6 +164,7 @@ Bitmap bitmap;
                     JSONObject jsonObject = new JSONObject(response);
                     String Response = jsonObject.getString("response");
                     Toast.makeText(getApplicationContext(), Response, Toast.LENGTH_LONG).show();
+                    startActivity(new Intent(AddActivity.this, MainActivity.class));
                 } catch (JSONException e) {
                     e.printStackTrace();
                 }
