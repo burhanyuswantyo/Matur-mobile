@@ -1,5 +1,8 @@
 package com.project.matur.api;
 
+import okhttp3.MultipartBody;
+import okhttp3.RequestBody;
+import retrofit2.Callback;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
@@ -20,4 +23,5 @@ public class RetrofitClient {
     public ApiInterface getServies(){
         return apiInterface;
     }
+
 }

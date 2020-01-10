@@ -46,9 +46,9 @@ public class LaporanAdapter extends RecyclerView.Adapter<LaporanAdapter.ViewHold
                 .load(laporan.get(position).getGambar())
                 .apply(requestOptions)
                 .into(holder.ivGambar);
-        holder.tvDeskripsi.setText("Deskripsi : " + laporan.get(position).getDeskripsi());
+        holder.tvDeskripsi.setText(laporan.get(position).getDeskripsi());
         holder.tvKategorti.setText("Kategori : " + laporan.get(position).getKategori());
-        holder.tvStatus.setText("Status : " + laporan.get(position).getStatus());
+        holder.tvStatus.setText(laporan.get(position).getStatus());
     }
 
     @Override

@@ -1,23 +1,21 @@
 package com.project.matur.ui;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.TextView;
 
-import androidx.annotation.Nullable;
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
-import androidx.lifecycle.Observer;
-import androidx.lifecycle.ViewModelProviders;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.google.gson.JsonObject;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.project.matur.MainActivity;
 import com.project.matur.R;
+import com.project.matur.activity.AddActivity;
 import com.project.matur.adapter.LaporanAdapter;
 import com.project.matur.api.ApiClient;
 import com.project.matur.api.ApiInterface;
@@ -31,7 +29,7 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-public class DashboardFragment extends Fragment {
+public class DashboardFragment extends Fragment implements View.OnClickListener {
     ApiInterface apiInterface;
     private RecyclerView recyclerView;
     private RecyclerView.Adapter adapter;
@@ -53,7 +51,8 @@ public class DashboardFragment extends Fragment {
         View root = inflater.inflate(R.layout.fragment_dashboard, container, false);
         recyclerView = (RecyclerView) root.findViewById(R.id.recyclerView);
         recyclerView.setLayoutManager(layoutManager);
-
+        FloatingActionButton fab = root.findViewById(R.id.fab_add);
+        fab.setOnClickListener(this);
 
         return root;
     }
@@ -76,5 +75,10 @@ public class DashboardFragment extends Fragment {
                 Log.e("Retrofit Get", t.toString());
             }
         });
+    }
+
+    @Override
+    public void onClick(View v) {
+        startActivity(new Intent(getContext(), AddActivity.class));
     }
 }

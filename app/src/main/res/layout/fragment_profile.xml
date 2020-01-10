@@ -52,33 +52,4 @@
         app:layout_constraintTop_toBottomOf="@+id/tvNIM"
         tools:layout_editor_absoluteX="105dp" />
 
-    <Button
-        android:id="@+id/btnMenunggu"
-        android:layout_width="200dp"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginTop="30dp"
-        android:text="Menunggu"
-        app:layout_constraintTop_toBottomOf="@+id/tvProdi"
-        tools:layout_editor_absoluteX="105dp" />
-
-    <Button
-        android:id="@+id/btnSelesai"
-        android:layout_width="200dp"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginTop="10dp"
-        android:text="Selesai"
-        app:layout_constraintTop_toBottomOf="@+id/btnDiproses"
-        tools:layout_editor_absoluteX="105dp" />
-
-    <Button
-        android:id="@+id/btnDiproses"
-        android:layout_width="200dp"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginTop="10dp"
-        android:text="Diproses"
-        app:layout_constraintTop_toBottomOf="@+id/btnMenunggu"
-        tools:layout_editor_absoluteX="105dp" />
 </LinearLayout>

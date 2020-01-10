@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#660066"
+    android:background="#7e0cf5"
     android:orientation="vertical"
     tools:context=".LoginActivity">
 
@@ -28,9 +28,9 @@
     <LinearLayout
         android:id="@+id/div_bottom"
         android:layout_width="match_parent"
-        android:layout_height="380dp"
+        android:layout_height="372dp"
         android:layout_alignParentBottom="true"
-        android:background="#660066"
+        android:background="#7e0cf5"
         android:clipToPadding="false"
         android:orientation="vertical"
         android:padding="24dp">
@@ -40,9 +40,10 @@
             android:layout_width="250dp"
             android:layout_height="30dp"
             android:layout_gravity="center"
-            android:background="@drawable/ic_edit_round"
-            android:textColorHint="#ff772a"
-            android:hint="NIM" />
+            android:background="#ffffff"
+            android:hint="NIM"
+            android:paddingLeft="10dp"
+            android:textColorHint="#000000" />
 
         <EditText
             android:id="@+id/edt_password"
@@ -50,11 +51,11 @@
             android:layout_height="30dp"
             android:layout_gravity="center"
             android:layout_marginTop="10dp"
-            android:background="@drawable/ic_edit_round"
+            android:background="#ffffff"
             android:hint="Password"
             android:inputType="textPassword"
-            android:textColorHint="#ff772a"
-            />
+            android:paddingLeft="10dp"
+            android:textColorHint="#000000" />
 
         <Button
             android:id="@+id/btn_login"
@@ -62,7 +63,7 @@
             android:layout_height="40dp"
             android:layout_gravity="center"
             android:layout_marginTop="20dp"
-            android:background="@drawable/ic_button_round"
+            android:background="#f7be16"
             android:stateListAnimator="@null"
             android:text="Login"
             android:textColor="@android:color/white" />
